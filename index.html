@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth@75&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth@75&family=Borel&family=Roboto+Mono&display=swap" rel="stylesheet">
+    </head>
+    
+    <link rel="stylesheet" href="style.css">
+    <title>PomoMusic</title>
+</head>
+<body>  
+    <div class="container">
+        <div class="banniere">
+            <h1>
+                PomoMusic
+            </h1>
+
+            <span class="hud">
+              <button class="hud-button" type= "button">
+                <div class="hud-button-config">
+                    <img src="icon/gear.png" alt="config" class="hud-icon">
+                    <div class="hud-text"> Paramètre </div>
+                </div>
+              </button>
+
+              <button class="hud-button" onclick="location.href='http://localhost:8888/login';" type= "button">
+                <div class="hud-button-config">
+                    <div class="hud-text">Connexion</div>
+                </div>
+            </button>
+
+            </span>
+        </div>
+
+        <div class="pannel">
+            <span id="timer" style="display: inline-block;"></span>
+            <input type="number" id="minutes" max ="59" min ="0" style="display: none;"> 
+            <span id="deuxpoints" style="display: none;">:</span>
+            <input type="number" id="secondes" max ="59" min ="0" style="display: none;">
+            <button class="classic-carre" type="button" id="btn-check" alt="valider" style="display: none" onclick="Valider()" ><ion-icon name="checkmark"></ion-icon></button>
+        </div>
+
+        <div class="minuteur">
+        
+            <button class="classic" type="button" id="button-play" alt="play" style="display: inline-block"onclick="Play(event)">Play</button>
+            <button class="classic" type="button" id="button-pause" onclick="Pause(event)" style="display: none">Pause</button>
+            <button class="classic" type= "button" onclick="Editer()" id="btn-edit">Editer</button>
+            <button class="classic" onclick="Reset()">Reset</button>
+
+        </div>
+
+
+    </div>
+    
+    <script src="index.js" type="module"></script>
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+   
+</body>
+</html>
